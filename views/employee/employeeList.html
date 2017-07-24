@@ -15,7 +15,7 @@
     </tr>
     <tr ng-repeat="employee in employees">
         <td class="text-center">
-            {{employee.employeeId}}
+            {{employee.id}}
         </td>
         <td class="text-center">
             {{employee.firstName}}
@@ -33,7 +33,7 @@
             {{employee.hireDate | date: 'dd-MM-yyyy'}}
         </td>
         <td class="text-center">
-            {{employee.jobId.jobTitle}}
+            {{employee.jobId}}
         </td>
         <td class="text-center">
             {{employee.salary}}
@@ -49,13 +49,13 @@
         </td>
         <td class="text-center">
             <div class="row">
-                <button type="button" class="btn btn-link" ng-click="view(employee.employeeId)">View</button>
+                <button type="button" class="btn btn-link" ng-click="view(employee.id)">View</button>
             </div>
             <div class="row">
-                <button type="button" class="btn btn-link" ng-click="edit(employee.employeeId)">Edit</button>
+                <button type="button" class="btn btn-link" ng-click="edit(employee.id)">Edit</button>
             </div>
             <div class="row">
-                <button type="button" class="btn btn-link" ng-click="delete(employee.employeeId)">Delete</button>
+                <button type="button" class="btn btn-link" ng-click="delete(employee.id)">Delete</button>
             </div>
         </td>
     </tr>
